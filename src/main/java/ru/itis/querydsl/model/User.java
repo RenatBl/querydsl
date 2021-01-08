@@ -1,5 +1,7 @@
 package ru.itis.querydsl.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,9 +18,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Entity
-@Document(collection = "employee")
+@Document(collection = "user")
 public class User {
+
     @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private ObjectId id;
 
     private String firstName;

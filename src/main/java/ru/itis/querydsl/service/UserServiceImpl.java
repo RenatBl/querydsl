@@ -4,6 +4,7 @@ import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.StringPath;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.itis.querydsl.model.QUser;
 import ru.itis.querydsl.model.User;
 import ru.itis.querydsl.repo.UserRepo;
 
